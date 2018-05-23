@@ -2,7 +2,7 @@
 #Building a Prediction Table#
 #############################
 
-setwd("~/Backup/Junk/Full_Text")
+setwd("~/")
 
 library(quanteda)
 library(dplyr)
