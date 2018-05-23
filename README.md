@@ -1,4 +1,4 @@
-## Text_Prediction
+## Text Prediction
 
 Training dataset can be found here:  
 https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip
