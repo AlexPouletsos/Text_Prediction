@@ -2,8 +2,9 @@
 
 The overall process for building a text predictor changed several times. At first I was too focused on accuracy and had to focus more on speed. My initial method was to read in the entire training dataset, which can be found here:  
 https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip  
-
-Once the text was cleaned I ran a loop that analyzed small pieces at a time and once a predicted word reached a certain level of confidence, the loop would break. This was proving to be an effective method if time was no issue. However, it was quite slow and impractical for an end user especially if it was going to return the top 3 predictions.  
+Once the text was cleaned I ran a loop that analyzed small pieces at a time and once a predicted word reached a certain level of confidence, the loop would break. See code here:
+https://github.com/AlexPouletsos/Text_Prediction/blob/master/Exploratory_Work/Algorithm%206.R
+This was proving to be an effective method if time was no issue. However, it was quite slow and impractical for an end user especially if it was going to return the top 3 predictions.  
 
 The final method for building a text predictor involved building a prediction table. The first step is to clean the data, then build 2 to 6 word n-grams. The next step is to separate the n-grams into two columns, "base" and "predicted", then only keep the top three predictions for each base. Now you have a manageable table for the text prediction algorithm to reference that will still be quite accurate.  
 
