@@ -2,6 +2,7 @@
 #Building a Prediction Table#
 #############################
 
+#en_US.news, en_US.blogs, en_US.twitter must be in working directory
 setwd("~/")
 
 library(quanteda)
