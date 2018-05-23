@@ -7,7 +7,9 @@ Once the text was cleaned I ran a loop that analyzed small pieces at a time and 
 
 The final method for building a text predictor involved building a prediction table. The first step is to clean the data, then build 2 to 6 word n-grams. The next step is to separate the n-grams into two columns, "base" and "predicted", then only keep the top three predictions for each base. Now you have a manageable table for the text prediction algorithm to reference that will still be quite accurate.  
 
-I first built the Prediction Table using 20% of the training dataset, but I found the prediction algorithm took too long to process. Using 10% of the training dataset seems to be the most I can use for the prediction algorithm to run at a comfortable speed. It doesn't seem much accuracy was sacrificed either. The experience could be much different for faster computers, but I found this to be the best option using a machine with 4 GB of RAM.
+I first built the Prediction Table using 20% of the training dataset, but I found the prediction algorithm took too long to process. Using 10% of the training dataset seems to be the most I can use for the prediction algorithm to run at a comfortable speed. It doesn't seem much accuracy was sacrificed either. The experience could be much different for faster computers, but I found this to be the best option using a machine with 4 GB of RAM.  
+
+Once a string of text is entered, the algorithm first removes any excess spaces and changes all characters to lowercase. Then it looks for an exact match in the 5-grams list and returns the 3 predictions. If there is no match, it looks for 4-gram, then 3-gram, etc. 
 
 
 
