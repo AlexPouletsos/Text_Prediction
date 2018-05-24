@@ -9,9 +9,9 @@ The final method for building a text predictor involved building a prediction ta
 
 I first built the Prediction Table using 20% of the training dataset, but I found the prediction algorithm took too long to process. Using 10% of the training dataset seems to be the most I can use for the prediction algorithm to run at a comfortable speed. It doesn't seem much accuracy was sacrificed either. The experience could be much different for faster computers, but I found this to be the best option using a machine with 4 GB of RAM.  
 
-Once a string of text is entered, the algorithm first removes any excess spaces and changes all characters to lowercase. Then it looks for an exact match in the 5-grams list and returns the 3 predictions. If there are less than 3 matches, it looks for 4-gram, then 3-gram, etc. In order to prevent repeats, there is a condition that if the model moves to the next set of n-grams then it won't return any predicted words already used in previous n-grams. 
+When the user enters a sentence, any extra spaces or capitalization will not effect the output. All letters will change to lower case, extra spaces between words will be reduced to one and any spaces at the end will be removed before the algorithm evaluates the string. Then it looks for an exact match in the 5-grams list and returns the 3 predictions. If there are less than 3 matches, it looks for 4-gram, then 3-gram, etc. In order to prevent repeats, there is a condition that if the model moves to the next set of n-grams then it won't return any predicted words already used in previous n-grams. 
 
-When the user enters a sentence, any extra spaces or capitalization will not effect the output. All letters will change to lower case, extra spaces between words will be reduced to one and any spaces at the end will be removed before the algorithm evaluates the string.
+
 
 Link to Text Predictor Shiny App:  
 https://alexpouletsos.shinyapps.io/Text_Predictor/
