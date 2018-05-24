@@ -1,6 +1,6 @@
 ## Text Prediction
 
-The overall process for building a text predictor changed several times. At first I was too focused on accuracy and had to focus more on speed. My initial method was to read in the entire training dataset, which can be found here:  
+The overall process for building a text predictor changed several times. At first I was too focused on accuracy and had to focus more on speed. My initial method was to read in the entire training dataset, which can be downloaded by clicking here:  
 https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip  
 Once the text was cleaned I ran a loop that analyzed small pieces at a time and once a predicted word reached a certain level of confidence, the loop would break. See code in the "Exploratory_Work" folder [here](https://github.com/AlexPouletsos/Text_Prediction/blob/master/Exploratory_Work/Accurate%20%26%20Slow%20Algorithm.R).
 This was proving to be an effective method if time was no issue. However, it was quite slow and would be even slower if the algorithm was to return the top 3 predictions. The idea was abandoned once I realized it can never be used in a practical application.
