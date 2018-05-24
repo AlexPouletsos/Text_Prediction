@@ -2,9 +2,11 @@ library(RCurl)
 library(stringi)
 library(dplyr)
 
+#Read the Final Prediction Table
 test <- read.csv(text=getURL("https://raw.githubusercontent.com/AlexPouletsos/Text_Prediction/master/Final_Prediction_Table.csv"), 
                               header=T)
 
+#Enter Text String
 wordIn <- "have you ever"
 
         wordIn5 <- stri_c(tail(unlist(strsplit(tolower(wordIn), split = "\\s+")), 5), collapse = " ")
