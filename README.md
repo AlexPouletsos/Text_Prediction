@@ -11,7 +11,7 @@ I first built the Prediction Table using 20% of the training dataset, but I foun
 
 When the user enters a sentence, any extra spaces or capitalization will not effect the output. All letters will change to lower case, extra spaces between words will be reduced to one and any spaces at the end will be removed before the algorithm evaluates the string. Regardless of how many words are typed, only the last 5 are evaluated. It looks for an exact match in the 5-grams list and returns the 3 predictions. If there are less than 3 predictions available, it takes the last four words of the string and returns the remaining predictions. This repeats until all 3 are filled. In order to prevent repeats, there is a condition that if the model moves to the next set of n-grams then it won't return any predicted words already used in previous n-grams. 
 
-
+The app will also recognize a period or question mark at the end of a sentence and will suggest "I", "In", and "The" to start your next sentence.
 
 Link to Text Predictor Shiny App:  
 https://alexpouletsos.shinyapps.io/Text_Predictor/
