@@ -1,5 +1,10 @@
 ## Text Prediction
-can be downloaded by clicking here:  
+
+Many of us have experienced how typing on a mobile devices can be slow and frustrating. A way to ease this frustration without carrying around a keyboard is to use text prediction where an application will accurately guess what you want to type before you type it.
+
+The goal of this project is to build a predictive text model and produce an application that uses it. The application will accept a partial sentence that the user will type, then return 3 options to choose from.
+
+In order to build a predictive text model, we need data. The dataset must contain written speech that can be used to calculate the most frequent occurrences of ngrams. The dataset used for this project is a series of blog posts, news articles and twitter feed, which can be downloaded by clicking here:  
 https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip    
 
 The overall process for building a text predictor changed several times. At first I was too focused on accuracy and had to focus more on speed. My initial method involved working with the entire training dataset. I ran a loop that cleaned and analyzed small pieces at a time and once a predicted word reached a certain level of confidence, the loop would break. See code in the "Exploratory_Work" folder [here](https://github.com/AlexPouletsos/Text_Prediction/blob/master/Exploratory_Work/Accurate%20%26%20Slow%20Algorithm.R).
@@ -9,9 +14,7 @@ The final method for building a text predictor involved building a prediction ta
 
 I first built the Prediction Table using 20% of the training dataset, but I found the prediction algorithm took too long to process. Using 10% of the training dataset seems to be the most I can use for the prediction algorithm to run at a comfortable speed. It doesn't seem much accuracy was sacrificed either. The experience could be much different for faster computers, but I found this to be the best option using a machine with 4 GB of RAM.  
 
-When the user enters a sentence, any extra spaces or capitalization will not effect the output. All letters will change to lower case, extra spaces between words will be reduced to one and any spaces at the end will be removed before the algorithm evaluates the string. Regardless of how many words are typed, only the last 5 are evaluated. It looks for an exact match in the 5-grams list and returns the 3 predictions. If there are less than 3 predictions available, it takes the last four words of the string and returns the remaining predictions. This repeats until all 3 are filled. In order to prevent repeats, there is a condition that if the model moves to the next set of n-grams then it won't return any predicted words already used in previous n-grams. 
-
-The app will also recognize a period or question mark at the end of a sentence and will suggest "I", "In", and "The" to start your next sentence.
+When the user enters a sentence, any extra spaces, commas or capitalization will not effect the output. All letters will change to lower case, extra spaces between words will be reduced to one and any spaces at the end will be removed before the algorithm evaluates the string. Regardless of how many words are typed, only the last 4 are evaluated. It looks for an exact match in the 4-grams list and returns the 3 predictions. If there are less than 3 predictions available, it takes the last three words of the string and returns the remaining predictions. If at last there are no matches at all, it will return "and", "to", or "the". This repeats until all 3 are filled. In order to prevent repeats, there is a condition that if the model moves to the next set of n-grams then it won't return any predicted words already used. The app will also recognize a period or question mark at the end of a sentence and will suggest "I", "In", and "The", which are 3 of the most common beginnings to a sentence.
 
 Link to Text Predictor Shiny App:  
 https://alexpouletsos.shinyapps.io/Text_Predictor/
