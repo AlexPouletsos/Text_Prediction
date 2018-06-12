@@ -4,7 +4,7 @@ Many of us have experienced how typing on mobile devices can be slow and frustra
 
 The goal of this project is to build a predictive text model and produce an application that uses it. The application will accept a partial sentence that the user will type, then return 3 options to choose from.
 
-In order to build a predictive text model, we need data. The dataset must contain written speech that can be used to calculate the most frequent occurrences of ngrams. The dataset used for this project is a series of blog posts, news articles and twitter feed, which can be downloaded by clicking here:  
+In order to build a predictive text model, we need data. The dataset must contain written speech that can be used to calculate the most frequent occurrences of ngrams. The dataset used for this project is a series of blog posts, news articles and twitter feeds, which can be downloaded by clicking here:  
 https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip    
 
 The overall process for building a text predictor changed several times. At first I was too focused on accuracy and had to focus more on speed. My initial method involved working with the entire training dataset. I ran a loop that cleaned and analyzed small pieces at a time and once a predicted word reached a certain level of confidence, the loop would break. See code in the "Exploratory_Work" folder [here](https://github.com/AlexPouletsos/Text_Prediction/blob/master/Exploratory_Work/Accurate%20%26%20Slow%20Algorithm.R).
