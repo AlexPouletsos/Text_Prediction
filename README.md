@@ -1,6 +1,6 @@
 ## Text Prediction
 
-Many of us have experienced how typing on a mobile devices can be slow and frustrating. A way to ease this frustration without carrying around a keyboard is to use text prediction where an application will accurately guess what you want to type next before you type it.
+Many of us have experienced how typing on mobile devices can be slow and frustrating. A way to ease this frustration without carrying around a keyboard is to use text prediction where an application will accurately guess what you want to type next before you type it.
 
 The goal of this project is to build a predictive text model and produce an application that uses it. The application will accept a partial sentence that the user will type, then return 3 options to choose from.
 
